@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>QuickView Exploit</title>
+    <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./img/icon_32.png">
+    <script src="./embed.js"></script>
+  </head> 
+  <body>
+    <div id="content">
+      <div id="title_div">
+        <img id="icon_img" src="./img/icon.png" width="64px" height="64px">
+        <h1>QuickView</h1>
+      </div>
+      <hr>
+      
+      <p>QuickView is a universal webview exploit in Chrome OS that utilizes the QuickOffice component extension. This exploit lets you create login windows with arbitrary URLs, thus allowing you to load pages without any extensions.</p>
+      <p>A blog post with an explanation is available on <a href="https://ading.fr.to/blog/posts/quickview.html" target="_blank">my website</a>.</p>
+
+      <h2>Instructions:</h2>
+      <ol>
+        <li>Drag the "QuickView Launcher" button into your bookmarks bar.</li>
+        <li>Double click on the opener button at the bottom of the page. This should open a new tab with a URL of <u>about:blank#blocked</u>.
+        <li>On the newly opened tab, click on the bookmarklet that was just created.</li>
+        <li>The QuickView GUI should open, and you can now enter any URL to open it in an unblocked webview.</li>
+        <li>You can open another webview at any time by visiting <a href="https://www.google.com/#%20" target="_blank">https://www.google.com/#%20</a>, and this will persist until a reboot. You can also drag the "QuickView Shortcut" button from below into your bookmarks bar for easy access. However, if you want to use the full GUI, you will still have to return to this page.</li>
+      </ol>
+      <p>If the above instructions did not work for you, you can try the standalone version <a href="./docx/quickview-standalone.docx">here</a>.</p>
+
+      <h2>Bookmarks:</h2>
+      <a id="launcher_link" class="button" style="margin-right: 8px;">QuickView Launcher</a>
+      <a class="button" href="https://www.google.com/#%20" target="_blank">QuickView Shortcut</a>
+      
+      <h2 style="margin-bottom: 12px;">Opener Button:</h2>
+      <div id="warning_div">
+      </div>
+      <div id="container">
+        <div id="overlay">
+          <p style="color:#f1f1f1">Click me!</p>
+        </div>
+        <iframe id="docx_iframe" src="about:blank"></iframe>
+      </div>
+
+      <h2>Credits:</h2>
+      <p>QuickView was created by vk6#7391 and Bypassi#7037, and it is licensed under the <a href="https://www.gnu.org/licenses/gpl-3.0.txt" target="_blank">GNU GPL v3</a>. The source code is available at: <a href="https://github.com/ading2210/quickview" target="_blank">https://github.com/ading2210/quickview</a></p>
+      <p>This exploit is part of the <a href="https://github.com/swarm-team" target="_blank">{swarm} project</a> and utilizes a variation of the <a href="https://blog.bypassi.com/_/point-blank" target="_blank">point-blank</a> exploit.</p>
+      
+      <div id="zoom_test"></div>
+    </div>
+  </body>
+</html>
